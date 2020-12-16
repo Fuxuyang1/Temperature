@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>4</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">b69acbaa2fc1201006472aa62799b679</sp_column>
+        <sp_widget display_value="Notes Approvals">325c83ea2fc1201006472aa62799b62c</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-16 05:46:32</sys_created_on>
+        <sys_id>349d476e2fc1201006472aa62799b66c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope>
+        <sys_update_name>sp_instance_349d476e2fc1201006472aa62799b66c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-16 05:46:32</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=349d476e2fc1201006472aa62799b66c"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="XQ">4d863f582fcd601006472aa62799b6d7</application>
+        <file_path/>
+        <instance_id>76c57592db7f03843c3ff0e5bf961915</instance_id>
+        <instance_name>dev48314</instance_name>
+        <name>sp_instance_349d476e2fc1201006472aa62799b66c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>4</order><roles/><short_description/><size>md</size><sp_column display_value="2">b69acbaa2fc1201006472aa62799b679</sp_column><sp_widget display_value="Notes Approvals">325c83ea2fc1201006472aa62799b62c</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-12-16 05:46:32</sys_created_on><sys_id>349d476e2fc1201006472aa62799b66c</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package><sys_policy/><sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope><sys_update_name>sp_instance_349d476e2fc1201006472aa62799b66c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-12-16 05:46:32</sys_updated_on><title/><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=349d476e2fc1201006472aa62799b66c"/></record_update>]]></payload>
+        <payload_hash>-455588856</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>85863f582fcd601006472aa62799b6da</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-16 05:46:32</sys_created_on>
+        <sys_id>f09d476e2fc1201006472aa62799b66e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1766a15f47d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-16 05:46:32</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>3c9d476eb4c12010029c109af2db516d</update_guid>
+        <update_guid_history>3c9d476eb4c12010029c109af2db516d:-455588856</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">247e03ae2fc1201006472aa62799b686</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-16 05:50:20</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>212e33a003cc4f4c874d4bc0f3f44810</sys_id>
+        <sys_metadata>349d476e2fc1201006472aa62799b66c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope>
+        <sys_scope_delete display_value="">0505a84e1fa34d4f91d99f330c8d4659</sys_scope_delete>
+        <sys_update_name>sp_instance_349d476e2fc1201006472aa62799b66c</sys_update_name>
+        <sys_update_version display_value="sp_instance_349d476e2fc1201006472aa62799b66c">f09d476e2fc1201006472aa62799b66e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-16 05:50:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

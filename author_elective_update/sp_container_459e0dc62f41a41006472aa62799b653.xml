@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>Test_Add - Container 1</name>
+        <order>1</order>
+        <sp_page display_value="test_add">421a739c2fcd601006472aa62799b668</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-14 07:14:42</sys_created_on>
+        <sys_id>459e0dc62f41a41006472aa62799b653</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Test_Add - Container 1</sys_name>
+        <sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope>
+        <sys_update_name>sp_container_459e0dc62f41a41006472aa62799b653</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-14 07:14:42</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="XQ">4d863f582fcd601006472aa62799b6d7</application>
+        <file_path/>
+        <instance_id>76c57592db7f03843c3ff0e5bf961915</instance_id>
+        <instance_name>dev48314</instance_name>
+        <name>sp_container_459e0dc62f41a41006472aa62799b653</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>Test_Add - Container 1</name><order>1</order><sp_page display_value="test_add">421a739c2fcd601006472aa62799b668</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-12-14 07:14:42</sys_created_on><sys_id>459e0dc62f41a41006472aa62799b653</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Test_Add - Container 1</sys_name><sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package><sys_policy/><sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope><sys_update_name>sp_container_459e0dc62f41a41006472aa62799b653</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-12-14 07:14:42</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-851075797</payload_hash>
+        <record_name>Test_Add - Container 1</record_name>
+        <reverted_from/>
+        <source>85863f582fcd601006472aa62799b6da</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-14 07:14:42</sys_created_on>
+        <sys_id>059e090a2f41a41006472aa62799b6c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1766019f69a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-14 07:14:42</sys_updated_on>
+        <type>Container</type>
+        <update_guid>4d9e090afa41a4106d969fc1becec3c4</update_guid>
+        <update_guid_history>4d9e090afa41a4106d969fc1becec3c4:-851075797</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Test_Add - Container 1">fe5557e22f05201006472aa62799b6f4</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-16 06:20:32</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>0a7d07dd201442289e14f4acc0a0a6c9</sys_id>
+        <sys_metadata>459e0dc62f41a41006472aa62799b653</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Test_Add - Container 1</sys_name>
+        <sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope>
+        <sys_scope_delete display_value="">0505a84e1fa34d4f91d99f330c8d4659</sys_scope_delete>
+        <sys_update_name>sp_container_459e0dc62f41a41006472aa62799b653</sys_update_name>
+        <sys_update_version display_value="sp_container_459e0dc62f41a41006472aa62799b653">059e090a2f41a41006472aa62799b6c5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-16 06:20:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

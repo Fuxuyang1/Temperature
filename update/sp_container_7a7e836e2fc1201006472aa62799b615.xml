@@ -6,22 +6,22 @@
         <bootstrap_alt>false</bootstrap_alt>
         <class_name/>
         <container_class_name/>
-        <name>Test_Add - Container 1</name>
-        <order>1</order>
-        <sp_page display_value="test_add">421a739c2fcd601006472aa62799b668</sp_page>
+        <name>note_detail - Container 2</name>
+        <order>2</order>
+        <sp_page display_value="note_detail">03c4ee6a2f41201006472aa62799b65a</sp_page>
         <subheader>false</subheader>
         <sys_class_name>sp_container</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-12-14 07:14:42</sys_created_on>
-        <sys_id>459e0dc62f41a41006472aa62799b653</sys_id>
+        <sys_created_on>2020-12-16 05:50:30</sys_created_on>
+        <sys_id>7a7e836e2fc1201006472aa62799b615</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Test_Add - Container 1</sys_name>
+        <sys_name>note_detail - Container 2</sys_name>
         <sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package>
         <sys_policy/>
         <sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope>
-        <sys_update_name>sp_container_459e0dc62f41a41006472aa62799b653</sys_update_name>
+        <sys_update_name>sp_container_7a7e836e2fc1201006472aa62799b615</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-12-14 07:14:42</sys_updated_on>
+        <sys_updated_on>2020-12-16 05:50:30</sys_updated_on>
         <title/>
         <width>container</width>
     </sp_container>
