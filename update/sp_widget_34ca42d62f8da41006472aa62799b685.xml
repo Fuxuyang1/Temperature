@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance_carousel</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>interval</field_list>
+        <has_preview>false</has_preview>
+        <id>a_carousel</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>A_Carousel</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[data.slides = $sp.getRelatedList('sp_carousel_slide','carousel_slide');]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-15 06:16:08</sys_created_on>
+        <sys_id>34ca42d62f8da41006472aa62799b685</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>A_Carousel</sys_name>
+        <sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope>
+        <sys_update_name>sp_widget_34ca42d62f8da41006472aa62799b685</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-15 06:53:45</sys_updated_on>
+        <template><![CDATA[<div class="pull-in">
+  <uib-carousel interval="options.interval">
+    <uib-slide ng-repeat="slide in ::data.slides" active="slide.active">
+      <div class="container">
+        <a href="{{::slide.url}}" title="Open carousel item">
+          <img ng-src="{{::slide.background}}" style="margin:auto; width:100%;" role="presentation">
+        </a>
+      </div>
+    </uib-slide>
+  </uib-carousel>
+</div>]]></template>
+    </sp_widget>
+</record_update>

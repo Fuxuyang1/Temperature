@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rel_widget_clone">
+    <sp_rel_widget_clone action="DELETE">
+        <child display_value="A_Nav">36bf22d22f01e41006472aa62799b6e1</child>
+        <cloned>2020-12-15 08:57:40</cloned>
+        <last_validated>2020-12-15 08:57:40</last_validated>
+        <parent display_value="Customer Service Search Navigation">aebfbd78b31d3200e408c75f26a8dcc4</parent>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sp_widget&gt;&lt;category/&gt;&lt;client_script&gt;&lt;![CDATA[function() {
+  /* widget controller */
+  var c = this;
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css/&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;csm-search-navigation-links&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link/&gt;&lt;name&gt;Customer Service Search Navigation&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[data.t = $sp.getParameter('t');
+data.q = encodeURIComponent($sp.getParameter('q'));
+data.enableCommunitySearch = false;
+data.enableKbSearch = false;
+
+var csm_portals = {"5b49418bdb4aa200b1f6f78eaf96195f" : "", "2086b814c3221200f3897bfaa2d3aea8" : "", "89275a53cb13020000f8d856634c9c51" : "", "45d6680fdb52220099f93691f0b8f5ad" : ""};
+
+if(!csm_portals.hasOwnProperty($sp.getPortalRecord().getUniqueValue())) {
+	data.showWidget = false;
+} else {
+	if (GlidePluginManager().isActive('com.sn_communities')) {
+		data.enableCommunitySearch = true;
+	}
+
+	if (GlidePluginManager().isActive('com.snc.knowledge_serviceportal')) {
+		data.enableKbSearch = true;
+	}
+
+	data.showWidget = data.enableCommunitySearch || data.enableKbSearch;
+}
+
+]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-02 02:38:58&lt;/sys_created_on&gt;&lt;sys_id&gt;aebfbd78b31d3200e408c75f26a8dcc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Customer Service Search Navigation&lt;/sys_name&gt;&lt;sys_package display_value="Customer Service Base Portal" source="com.glide.service-portal.customer-service-base"&gt;0b2f9a252fac201006472aa62799b62a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_aebfbd78b31d3200e408c75f26a8dcc4&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-02 02:39:20&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="panel panel-default" ng-show="data.showWidget"&gt;
+  &lt;div class="panel-heading"&gt;
+    &lt;h4 role="header" class="panel-title"&gt;${Search Within}&lt;/h4&gt;
+  &lt;/div&gt;
+  &lt;div class="list-group"&gt;
+    &lt;div ng-show="data.enableCommunitySearch" class="list-group-item"&gt;
+      &lt;a ng-href="?id=community_search&amp;q={{data.q}}"&gt;Community&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div ng-show="data.enableKbSearch"  class="list-group-item"&gt;
+      &lt;a ng-href="/kb?id=kb_search&amp;keyword={{data.q}}"&gt;Knowledge&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;</payload>
+        <sys_class_name>sp_rel_widget_clone</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-15 08:57:40</sys_created_on>
+        <sys_id>f2bf22d22f01e41006472aa62799b6e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>36bf22d22f01e41006472aa62799b6e1</sys_name>
+        <sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope>
+        <sys_update_name>sp_rel_widget_clone_f2bf22d22f01e41006472aa62799b6e4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-15 08:57:40</sys_updated_on>
+    </sp_rel_widget_clone>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="XQ">4d863f582fcd601006472aa62799b6d7</application>
+        <file_path/>
+        <instance_id>76c57592db7f03843c3ff0e5bf961915</instance_id>
+        <instance_name>dev48314</instance_name>
+        <name>sp_rel_widget_clone_f2bf22d22f01e41006472aa62799b6e4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rel_widget_clone"><sp_rel_widget_clone action="INSERT_OR_UPDATE"><child display_value="A_Nav">36bf22d22f01e41006472aa62799b6e1</child><cloned>2020-12-15 08:57:40</cloned><last_validated>2020-12-15 08:57:40</last_validated><parent display_value="Customer Service Search Navigation">aebfbd78b31d3200e408c75f26a8dcc4</parent><payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sp_widget&gt;&lt;category/&gt;&lt;client_script&gt;&lt;![CDATA[function() {
+  /* widget controller */
+  var c = this;
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css/&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;csm-search-navigation-links&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link/&gt;&lt;name&gt;Customer Service Search Navigation&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[data.t = $sp.getParameter('t');
+data.q = encodeURIComponent($sp.getParameter('q'));
+data.enableCommunitySearch = false;
+data.enableKbSearch = false;
+
+var csm_portals = {"5b49418bdb4aa200b1f6f78eaf96195f" : "", "2086b814c3221200f3897bfaa2d3aea8" : "", "89275a53cb13020000f8d856634c9c51" : "", "45d6680fdb52220099f93691f0b8f5ad" : ""};
+
+if(!csm_portals.hasOwnProperty($sp.getPortalRecord().getUniqueValue())) {
+	data.showWidget = false;
+} else {
+	if (GlidePluginManager().isActive('com.sn_communities')) {
+		data.enableCommunitySearch = true;
+	}
+
+	if (GlidePluginManager().isActive('com.snc.knowledge_serviceportal')) {
+		data.enableKbSearch = true;
+	}
+
+	data.showWidget = data.enableCommunitySearch || data.enableKbSearch;
+}
+
+]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-02 02:38:58&lt;/sys_created_on&gt;&lt;sys_id&gt;aebfbd78b31d3200e408c75f26a8dcc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Customer Service Search Navigation&lt;/sys_name&gt;&lt;sys_package display_value="Customer Service Base Portal" source="com.glide.service-portal.customer-service-base"&gt;0b2f9a252fac201006472aa62799b62a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_aebfbd78b31d3200e408c75f26a8dcc4&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-03-02 02:39:20&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="panel panel-default" ng-show="data.showWidget"&gt;
+  &lt;div class="panel-heading"&gt;
+    &lt;h4 role="header" class="panel-title"&gt;${Search Within}&lt;/h4&gt;
+  &lt;/div&gt;
+  &lt;div class="list-group"&gt;
+    &lt;div ng-show="data.enableCommunitySearch" class="list-group-item"&gt;
+      &lt;a ng-href="?id=community_search&amp;q={{data.q}}"&gt;Community&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div ng-show="data.enableKbSearch"  class="list-group-item"&gt;
+      &lt;a ng-href="/kb?id=kb_search&amp;keyword={{data.q}}"&gt;Knowledge&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;</payload><sys_class_name>sp_rel_widget_clone</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-12-15 08:57:40</sys_created_on><sys_id>f2bf22d22f01e41006472aa62799b6e4</sys_id><sys_mod_count>0</sys_mod_count><sys_name>36bf22d22f01e41006472aa62799b6e1</sys_name><sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package><sys_policy/><sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope><sys_update_name>sp_rel_widget_clone_f2bf22d22f01e41006472aa62799b6e4</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-12-15 08:57:40</sys_updated_on></sp_rel_widget_clone></record_update>]]></payload>
+        <payload_hash>-1289851180</payload_hash>
+        <record_name>36bf22d22f01e41006472aa62799b6e1</record_name>
+        <reverted_from/>
+        <source>85863f582fcd601006472aa62799b6da</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-15 08:57:40</sys_created_on>
+        <sys_id>febf22d22f01e41006472aa62799b6e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>176659e95c40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-15 08:57:40</sys_updated_on>
+        <type>Widget Clone</type>
+        <update_guid>3abf22d2fc01e410fbd105e7a7d3cbe5</update_guid>
+        <update_guid_history>3abf22d2fc01e410fbd105e7a7d3cbe5:-1289851180</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">bc107a962f01e41006472aa62799b63d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-15 08:59:09</sys_created_on>
+        <sys_db_object display_value="" name="sp_rel_widget_clone">sp_rel_widget_clone</sys_db_object>
+        <sys_id>8ae67113553145f6a19ca3521d7fc2a4</sys_id>
+        <sys_metadata>f2bf22d22f01e41006472aa62799b6e4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>36bf22d22f01e41006472aa62799b6e1</sys_name>
+        <sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope>
+        <sys_scope_delete display_value="">0505a84e1fa34d4f91d99f330c8d4659</sys_scope_delete>
+        <sys_update_name>sp_rel_widget_clone_f2bf22d22f01e41006472aa62799b6e4</sys_update_name>
+        <sys_update_version display_value="sp_rel_widget_clone_f2bf22d22f01e41006472aa62799b6e4">febf22d22f01e41006472aa62799b6e5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-15 08:59:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

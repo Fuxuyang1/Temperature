@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($location, $rootScope) {
+	var c = this;
+	
+	function format(value) {		
+		if (!value)
+			return "";
+		/*
+		return value.toLowerCase()
+			.replace(/[^a-z0-9\-]/gi,'_')
+			.replace(/^-|-$/g, '');		
+			*/
+	}
+	
+	c.submit = function() {
+		c.server.update().then(function(response) {
+			if (c.data.invalidWidgetID || c.data.invalidPageID)
+				return;
+
+			$rootScope.$broadcast('$sp.widget-close-modal');
+			var s = $location.search();
+			s.sys_id = c.data.sys_id;
+			c.redirecting = true;
+			$location.search(s).replace();
+		});
+	}
+	c.fixID = function(id) {
+		if (!id) return;
+		c.data.id = format(id.toString());
+	}
+	
+	c.fixPageID = function(id) {
+		if (!id) return;
+		c.data.test_page_id = format(id.toString());
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.msg {
+  font-color: #f95050;
+}
+
+.form-control.ng-invalid {
+  border: 1px solid #f95050;
+}
+
+.add-widget-invalid-id {
+  color: #641e1b;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>my_add_widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>My Add Widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	
+data.nameRequiredMsg = gs.getMessage("名前を入力してください...");
+data.cardidRequiredMsg = gs.getMessage("カード番号を入力してください...");
+data.temperatureRequiredMsg = gs.getMessage("今日の体温を入力してください...");
+
+function saveWidget(input) {
+	data.invalidWidgetID = false;
+	data.invalidPageID = false;
+	var stateArray = ["awaiting","approved","rejected","closed"];
+	var temp =input.temperature +'℃';
+	if(input.temperature>=37){
+		 selectState = stateArray[0];
+		 }
+	else if(input.temperature<37){
+		 selectState = stateArray[3];			
+		 }
+	
+	var tempGR = new GlideRecord("x_549089_xq_temperaturedetails");
+	tempGR.query("id", input.id);
+	
+	tempGR.initialize();
+	tempGR.setValue("temperature", temp);
+	tempGR.setValue("cardid", input.cardid);
+	tempGR.setValue("name", input.name);
+	tempGR.setValue("state", selectState );
+	tempGR.setValue("user", gs.getUser().getID());
+	data.sys_id = tempGR.insert();
+
+}
+
+if (input)
+	saveWidget(input);	
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-09 09:07:13</sys_created_on>
+        <sys_id>5468f75c2fcd601006472aa62799b611</sys_id>
+        <sys_mod_count>47</sys_mod_count>
+        <sys_name>My Add Widget</sys_name>
+        <sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope>
+        <sys_update_name>sp_widget_5468f75c2fcd601006472aa62799b611</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-16 01:33:49</sys_updated_on>
+        <template><![CDATA[<form name="createWidget" ng-submit="c.submit()">
+  <div class="form-group">
+    <p>カード番号：<input required type="text" class="form-control" ng-change="c.updateID()" ng-required="true" name="cardid" maxlength="4" pattern="^[0-9]+$" ng-model="c.data.cardid" placeholder="{{::data.cardidRequiredMsg}}" /></p>
+    <div class="msg" ng-show="!c.data.cardid" class="m-t-xs">${カード番号には特殊な文字と英字が含まれています。もう一度入力してください。}</div>
+  </div>
+  <div class="form-group">
+    <p>名前：<input required type="text" class="form-control"  ng-required="true" name="name" ng-model="c.data.name" placeholder="{{::data.nameRequiredMsg}}" /></p>
+  </div>
+  <div class="form-group" ng-class="{'has-error': c.invalidID}">
+    <p>体温：<input required type="text" class="form-control" ng-change="c.clearInvalidWidgetIDMsg()" ng-blur="c.fixID(c.data.id)" maxlength="4" pattern="^[0-9]+(.[0-9]{0,1})?$" name="temperature" ng-model="c.data.temperature" placeholder="{{::data.temperatureRequiredMsg}}" /></p>
+     <div class="msg" ng-show="!c.data.temperature" class="m-t-xs">${体温入力が規格に合わないので、もう一度入力してください。}</div>
+    
+  </div>
+  <div class="checkbox">  
+  </div>  
+  <button type="submit" class="btn btn-primary pull-right" ng-class="{'disabled': !createWidget.$valid}">${提交}</button>
+  <div class="clearfix"></div>
+</form>]]></template>
+    </sp_widget>
+</record_update>

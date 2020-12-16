@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="TemperatureDe">49b7335c2fcd601006472aa62799b668</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>TemperatureDetails</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_549089_xq_temperaturedetails</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_549089_xq.temperaturedetails_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-09 09:04:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>81b7335c2fcd601006472aa62799b66c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TemperatureDetails</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope>
+        <sys_update_name>sys_app_module_81b7335c2fcd601006472aa62799b66c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-09 09:04:16</sys_updated_on>
+        <timeline_page/>
+        <title>TemperatureDetails</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="XQ">4d863f582fcd601006472aa62799b6d7</application>
+        <file_path/>
+        <instance_id>76c57592db7f03843c3ff0e5bf961915</instance_id>
+        <instance_name>dev48314</instance_name>
+        <name>sys_app_module_81b7335c2fcd601006472aa62799b66c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="TemperatureDe">49b7335c2fcd601006472aa62799b668</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>TemperatureDetails</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_549089_xq_temperaturedetails</name><order/><override_menu_roles>false</override_menu_roles><query/><report/><roles>x_549089_xq.temperaturedetails_user</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-12-09 09:04:16</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>81b7335c2fcd601006472aa62799b66c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>TemperatureDetails</sys_name><sys_overrides/><sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package><sys_policy/><sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope><sys_update_name>sys_app_module_81b7335c2fcd601006472aa62799b66c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-12-09 09:04:16</sys_updated_on><timeline_page/><title>TemperatureDetails</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-19489280</payload_hash>
+        <record_name>TemperatureDetails</record_name>
+        <reverted_from/>
+        <source>85863f582fcd601006472aa62799b6da</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-09 09:04:16</sys_created_on>
+        <sys_id>05b7335c2fcd601006472aa62799b66f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17646be77a10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-09 09:04:16</sys_updated_on>
+        <type>Module</type>
+        <update_guid>4db7335cc6cd6010167dad6cd80ac26e</update_guid>
+        <update_guid_history>4db7335cc6cd6010167dad6cd80ac26e:-19489280</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="TemperatureDetails">333cd9cd2f09e01006472aa62799b6bf</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-11 05:40:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>a6fec5a7ba2640e8b89315420650fbd1</sys_id>
+        <sys_metadata>81b7335c2fcd601006472aa62799b66c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TemperatureDetails</sys_name>
+        <sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope>
+        <sys_scope_delete display_value="">0505a84e1fa34d4f91d99f330c8d4659</sys_scope_delete>
+        <sys_update_name>sys_app_module_81b7335c2fcd601006472aa62799b66c</sys_update_name>
+        <sys_update_version display_value="sys_app_module_81b7335c2fcd601006472aa62799b66c">05b7335c2fcd601006472aa62799b66f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-11 05:40:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

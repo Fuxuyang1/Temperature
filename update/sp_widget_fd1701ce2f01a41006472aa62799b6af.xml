@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope,$rootScope,spModal) {
+	/* widget controller */
+	var c = this;
+
+	$rootScope.$on('selectNote', function(event,data) {
+		c.server.get({
+			action: 'getNote',
+			noteID: $rootScope.noteID
+		}).then(function(r) {
+			c.data.name = r.data.note.name;
+			c.data.cardid = r.data.note.cardid;
+			c.data.temperature = r.data.note.temperature;
+			c.data.state = r.data.note.state;
+			c.data.user = r.data.note.user;
+			c.data.noteID = r.data.note.sys_id;
+		});
+	});
+
+	c.updateNote = function(updateType) {
+		c.server.get({
+			action: 'updateNote',
+			noteID: c.data.noteID,
+			noteName: c.data.name,
+			noteTemp: c.data.temperature
+			//noteTemperature: c.data.temperature
+			
+		}).then(function(r) {
+			// When the promise is returned, emit the change
+			if (updateType == 'body') { 
+				$rootScope.$emit('updateTitle', r.data); 
+			}
+		});
+	}
+	c.deleteNote = function() {
+		c.server.get({
+			action: 'deleteNote',
+			noteID: c.data.noteID
+		}).then(function(r) {
+			$rootScope.$emit('deleteNote', c.data.noteID);
+			c.data.name = '';
+			c.data.cardid = '';
+			c.data.temperature = '';
+			c.data.state = '';
+			c.data.user = '';
+			c.data.noteID = '';
+		});
+	}
+	c.confirmDelete = function() {
+		spModal.confirm("このレコードを削除しますか？").then(function(confirmed) {
+			if(confirmed) {
+				c.deleteNote();
+			}
+		});
+	}
+}
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>a_notes_body</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>A_Notes_Body</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+	if (input && input.noteID) {
+		var note = new GlideRecord('x_549089_xq_temperaturedetails');
+		if (note.get(input.noteID)) {
+			if (input.action == 'getNote') {
+				data.note = {};
+				$sp.getRecordValues(data.note, note, "name,cardid,temperature,state,user,sys_id");
+				data.note.state=note.state.getDisplayValue();
+				data.note.user=note.user.getDisplayValue();
+			}
+			else if (input.action == 'updateNote') { 
+				note.name = input.noteName; 
+				//note.cardid = input.noteBody; 
+				note.temperature = input.noteTemp;
+				note.update(); 
+				// Need to update the data object with the new title
+				// and first 20 characters of the note (do not want to write huge
+				// strings to the Notes List widget)
+				data.name = note.getValue('name');
+				data.cardid = note.getValue('cardid');
+				data.temperature = note.getValue('temperature');
+				data.state = note.getValue('state');
+				
+			}
+
+			else if (input.action == 'deleteNote') { 
+				note.deleteRecord(); 
+			}
+		}
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-14 06:42:00</sys_created_on>
+        <sys_id>fd1701ce2f01a41006472aa62799b6af</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name>A_Notes_Body</sys_name>
+        <sys_package display_value="XQ" source="x_549089_xq">4d863f582fcd601006472aa62799b6d7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="XQ">4d863f582fcd601006472aa62799b6d7</sys_scope>
+        <sys_update_name>sp_widget_fd1701ce2f01a41006472aa62799b6af</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-16 03:02:19</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default" ng-show="c.data.noteID">
+  <div class="panel-heading clearfix">
+    <div class="row">
+      <h2>詳細情報一覧</h2> 
+      <div class="panel-body">
+        <p>カード番号:</p><input class="form-control" id="note-body" ng-model="c.data.cardid" readonly="true" ng-change="c.updateNote('body')" ng-model-options="{debounce: 1000}" >
+      </div>
+      <div class="panel-body">
+        <p>名前:</p><input class="form-control" id="note-body" ng-model="c.data.name" ng-change="c.updateNote('title')" ng-model-options="{debounce: 1000}"/>
+      </div> 
+      <div class="panel-body">
+        <p>体温:</p><input class="form-control" id="note-body" ng-model="c.data.temperature" ng-change="c.updateNote('body')" ng-model-options="{debounce: 1000}" >
+      </div>
+      <div class="panel-body">
+        <p>承認状態:</p><input class="form-control" id="note-body" ng-model="c.data.state" readonly="true" ng-change="c.updateNote('body')" ng-model-options="{debounce: 1000}" >
+      </div>
+      <div class="panel-body">
+        <p>所属ユーザ:</p><input class="form-control" id="note-body" ng-model="c.data.user" readonly="true" ng-change="c.updateNote('body')" ng-model-options="{debounce: 1000}" >
+      </div>
+    </div>
+  </div>
+  <delete-button-confirm></delete-button-confirm>
+</div>]]></template>
+    </sp_widget>
+</record_update>

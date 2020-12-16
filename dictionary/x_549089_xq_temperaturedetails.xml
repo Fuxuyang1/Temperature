@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="TemperatureDetails" max_length="40" name="x_549089_xq_temperaturedetails" type="collection">
+        <element label="カード番号" max_length="8" name="cardid" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="名前" max_length="10" name="name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="承認状態" max_length="40" name="state" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="体温正常" sequence="0" value="normal"/>
+                <element inactive="true" inactive_on_update="true" label="已承認" sequence="0" value="confirm"/>
+                <element inactive_on_update="false" label="異常温度承認待ち" sequence="0" value="awaiting"/>
+                <element inactive="true" inactive_on_update="true" label="体温異常" sequence="1" value="abnormal"/>
+                <element inactive="true" inactive_on_update="true" label="未承認" sequence="1" value="uunconfirm"/>
+                <element inactive_on_update="false" label="異常温度承認済み" sequence="1" value="approved"/>
+                <element inactive_on_update="false" label="異常温度承認されない" sequence="2" value="rejected"/>
+                <element inactive_on_update="false" label="正常温度なのでクローズ" sequence="3" value="closed"/>
+            </choice>
+        </element>
+        <element label="体温" max_length="8" name="temperature" type="string"/>
+        <element attributes="encode_utf8=false" label="所属ユーザ" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="test" max_length="40" name="u_choice_1" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Choice 1" sequence="0" value="Choice 1"/>
+                <element inactive_on_update="false" label="Choice 2" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>
